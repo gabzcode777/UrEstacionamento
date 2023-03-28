@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/loginstyle.css">
+    <script src="loader.js"></script>
+    <script>
+    </script>
+</head>
+<body>
+
+<form>
+    <main class="card">
+    <section class="card estaciomento">
+    <div class="icon">
+        <img src="logotipo.png">
+    </div>
+    <h3>Vaga estaciomento</h3>
+
+    <div class="nome">
+        <label> Modelo:
+    <select name="modelo" id="model" placeholder="Modelo" value="Horas">
+        <option value="Subcompacto">Subcompacto</option>
+         <option value="Compacto">Compacto</option>
+          <option value="Hatch">Hatch</option>
+           <option value="Sedan">Sedan</option>
+            <option value="SUV">SUV</option>
+             <option value="Pick-up">Pick-up</option>
+    </select>
+        </label>
+    </div>
+    <br>
+    <input type="text" id="placa" placeholder="Placa" oninput="formatarInput(this)" required>
+    <br>
+
+
+    <div class="horas">
+        <label> Horas:
+    <select name="horas" id="hora" aria-placeholder="Quantidade de horas" required>
+       <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+    </select>
+        </label>
+    </div>
+
+    <br>
+    <div class="button">
+    <input type="button" value="Calcular" onclick="calculo()"  style=" 
+    padding:3px; size: 32px; padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    background-color: #01285B;
+    color: #ffffff;
+    margin-bottom: 16px 0; onclick=">
+
+    <input type="reset" value="Realizar nova compra" style=" 
+    padding:3px; size: 32px; padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    background-color: #01285B;
+    color: #ffffff;
+    margin-bottom: 16px 0; onclick=">
+
+    </div>
+    <br>
+<p id="resultado"></p>
+
+</section>
+
+</form>
+
+</main>
+</body>
+</html>
